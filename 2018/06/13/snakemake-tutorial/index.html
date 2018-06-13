@@ -85,7 +85,7 @@
 
 <meta name="description" content="生物信息信息学流程搭建工具－snakemake教程第一步：配置环境需要的软件这些软件都可以直接用conda安装1conda install -y snakemake bwa samtools bcftools graphviz pyyaml docutils 下载示例数据12wget https://bitbucket.org/snakemake/snakemake-tutorial/get/v3">
 <meta property="og:type" content="article">
-<meta property="og:title" content="冷洋">
+<meta property="og:title" content="生物信息信息学流程搭建工具－snakemake教程">
 <meta property="og:url" content="http://yoursite.com/2018/06/13/snakemake-tutorial/index.html">
 <meta property="og:site_name" content="冷洋">
 <meta property="og:description" content="生物信息信息学流程搭建工具－snakemake教程第一步：配置环境需要的软件这些软件都可以直接用conda安装1conda install -y snakemake bwa samtools bcftools graphviz pyyaml docutils 下载示例数据12wget https://bitbucket.org/snakemake/snakemake-tutorial/get/v3">
@@ -100,9 +100,9 @@
 <meta property="og:image" content="http://p8gdfbtx6.bkt.clouddn.com/2018-06-06-23-23-04-201866.png">
 <meta property="og:image" content="http://p8gdfbtx6.bkt.clouddn.com/2018-06-06-23-51-44-201866.png">
 <meta property="og:image" content="http://p8gdfbtx6.bkt.clouddn.com/2018-06-07-00-06-27-201867.png">
-<meta property="og:updated_time" content="2018-06-13T07:45:41.047Z">
+<meta property="og:updated_time" content="2018-06-13T09:01:44.460Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="冷洋">
+<meta name="twitter:title" content="生物信息信息学流程搭建工具－snakemake教程">
 <meta name="twitter:description" content="生物信息信息学流程搭建工具－snakemake教程第一步：配置环境需要的软件这些软件都可以直接用conda安装1conda install -y snakemake bwa samtools bcftools graphviz pyyaml docutils 下载示例数据12wget https://bitbucket.org/snakemake/snakemake-tutorial/get/v3">
 <meta name="twitter:image" content="http://p8gdfbtx6.bkt.clouddn.com/2018-06-13-15-42-22-2018613.png">
 
@@ -140,12 +140,22 @@
 
 
 
-  <title> | 冷洋</title>
+  <title>生物信息信息学流程搭建工具－snakemake教程 | 冷洋</title>
   
 
 
 
 
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?2c41cab48f9a2cf90154f4b323282f73";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -294,7 +304,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">生物信息信息学流程搭建工具－snakemake教程</h1>
         
 
         <div class="post-meta">
@@ -306,7 +316,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-13T15:45:41+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-13T17:01:44+08:00">
                 2018-06-13
               </time>
             
@@ -323,6 +333,17 @@
           
 
           
+          
+             <span id="/2018/06/13/snakemake-tutorial/" class="leancloud_visitors" data-flag-title="生物信息信息学流程搭建工具－snakemake教程">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
           
 
           
@@ -745,6 +766,113 @@
 
 
   
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("Lji3k2Sno8J07yoLyuipgF4d-gzGzoHsz", "XRxAPD8LzbskF1uPu0CoD8NV");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 
