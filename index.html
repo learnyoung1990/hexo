@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="">
+<html class="theme-next gemini use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -85,7 +85,7 @@
 <meta property="og:title" content="冷洋">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="冷洋">
-<meta property="og:locale" content="default">
+<meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="冷洋">
 
@@ -95,15 +95,15 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Gemini',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: '博主'
     },
     algolia: {
       applicationID: '',
@@ -135,14 +135,14 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
     
   
 
-  <div class="container sidebar-position-left 
+  <div class="container sidebar-position-right 
   page-home">
     <div class="headband"></div>
 
@@ -184,7 +184,27 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
           </a>
         </li>
       
@@ -194,7 +214,17 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            站点地图
           </a>
         </li>
       
@@ -250,7 +280,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/06/13/snakemake-tutorial/" itemprop="url">Untitled</a></h1>
+                <a class="post-title-link" href="/2018/06/13/snakemake-tutorial/" itemprop="url">未命名</a></h1>
         
 
         <div class="post-meta">
@@ -260,9 +290,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-13T15:38:45+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-13T15:45:41+08:00">
                 2018-06-13
               </time>
             
@@ -302,23 +332,20 @@
       
         
           
-            <h1 id="生物信息信息学流程搭建工具－snakemake教程"><a href="#生物信息信息学流程搭建工具－snakemake教程" class="headerlink" title="生物信息信息学流程搭建工具－snakemake教程"></a>生物信息信息学流程搭建工具－snakemake教程</h1><h2 id="第一步：配置环境"><a href="#第一步：配置环境" class="headerlink" title="第一步：配置环境"></a>第一步：配置环境</h2><p>###需要的软件<br><img src="http://p8gdfbtx6.bkt.clouddn.com/201865.png" alt="201865"><br>这些软件都可以直接用<code>conda</code>安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install -y snakemake bwa samtools bcftools graphviz pyyaml docutils</span><br></pre></td></tr></table></figure></p>
-<p>###下载示例数据<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget https://bitbucket.org/snakemake/snakemake-tutorial/get/v3.11.0.tar.bz2</span><br><span class="line">tar -xf v3.11.0.tar.bz2 --strip 1</span><br></pre></td></tr></table></figure></p>
+            <h1 id="生物信息信息学流程搭建工具－snakemake教程"><a href="#生物信息信息学流程搭建工具－snakemake教程" class="headerlink" title="生物信息信息学流程搭建工具－snakemake教程"></a>生物信息信息学流程搭建工具－snakemake教程</h1><h2 id="第一步：配置环境"><a href="#第一步：配置环境" class="headerlink" title="第一步：配置环境"></a>第一步：配置环境</h2><h3 id="需要的软件"><a href="#需要的软件" class="headerlink" title="需要的软件"></a>需要的软件</h3><p><img src="http://p8gdfbtx6.bkt.clouddn.com/2018-06-13-15-42-22-2018613.png" alt="2018-06-13-15-42-22-2018613"><br>这些软件都可以直接用<code>conda</code>安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install -y snakemake bwa samtools bcftools graphviz pyyaml docutils</span><br></pre></td></tr></table></figure></p>
+<h3 id="下载示例数据"><a href="#下载示例数据" class="headerlink" title="下载示例数据"></a>下载示例数据</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget https://bitbucket.org/snakemake/snakemake-tutorial/get/v3.11.0.tar.bz2</span><br><span class="line">tar -xf v3.11.0.tar.bz2 --strip 1</span><br></pre></td></tr></table></figure>
 <p>完成后产生一下三个文件</p>
 <div align="center"><br><br><img src="http://p8gdfbtx6.bkt.clouddn.com/2018-06-05-11-24-06-201865.png" alt="2018-06-05-11-24-06-201865"><br></div>
 
 
 <h3 id="创建snakemake-tutorial环境"><a href="#创建snakemake-tutorial环境" class="headerlink" title="创建snakemake-tutorial环境"></a>创建snakemake-tutorial环境</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda env create --name snakemake-tutorial --file environment.yaml</span><br></pre></td></tr></table></figure>
-<p>###激活环境<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source activate snakemake-tutorial</span><br></pre></td></tr></table></figure></p>
+<h3 id="激活环境"><a href="#激活环境" class="headerlink" title="激活环境"></a>激活环境</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source activate snakemake-tutorial</span><br></pre></td></tr></table></figure>
 <p>##　第二步：流程构建基本步骤<br>snakemake是通过定义不同的rule来工作了，rule把流程分解为不同的小步骤，这种分解的方式是通过将输入文件转化为输出文件来实现的。snakemake可以通过文件名来自动解决依赖。</p>
 <hr>
-<p><strong>下面以<code>bwa-samtools-bcftools</code>call variant的过程为列来构建<code>snakemake流程</code></strong></p>
+<p><strong>下面以<code>bwa-samtools-bcftools</code> call variant的过程为列来构建<code>snakemake流程</code></strong></p>
 <h3 id="１-将reads-mapping到参考基因组上"><a href="#１-将reads-mapping到参考基因组上" class="headerlink" title="１ 将reads mapping到参考基因组上"></a>１ 将reads mapping到参考基因组上</h3><p>首先用创建<code>Snakefile</code>的文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">rule bwa_map:</span><br><span class="line">    input:</span><br><span class="line">        &quot;data/genome.fa&quot;,</span><br><span class="line">        &quot;data/samples/A.fastq&quot;</span><br><span class="line">    output:</span><br><span class="line">        &quot;mapped_reads/A.bam&quot;</span><br><span class="line">    shell:</span><br><span class="line">        &quot;bwa mem &#123;input&#125; | samtools view -Sb - &gt; &#123;output&#125;&quot;</span><br></pre></td></tr></table></figure></p>
 <p>==注意==: 这里输入文件有两个，需要用<code>,</code>隔开</p>
-<ul>
-<li><strong>伪执行一下</strong><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">snakemake -np mapped_reads/A.bam</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
+<p><strong>伪执行一下</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">snakemake -np mapped_reads/A.bam</span><br></pre></td></tr></table></figure></p>
 <p><code>-n</code>: 提示snakemake执行 <code>--dryrun</code>也就是假运行，只提示运行的逻辑，但不会实际运行。<br><code>-p</code>: 打印shell命令行<br>这里snakemake根据Snakefile中编写的生成mapped_reads/A.bam的rule，显示具体的执行命令，但未执行程序。这样，我们可以很方便的检查Snakefile中执行的命令与我们设想的是否一致。</p>
 <div align="center"><br><br><img src="http://p8gdfbtx6.bkt.clouddn.com/2018-06-05-17-52-05-201865.png" alt="2018-06-05-17-52-05-201865"><br></div>
 
@@ -460,7 +487,7 @@
                 <a href="/archives/">
               
                   <span class="site-state-item-count">1</span>
-                  <span class="site-state-item-name">posts</span>
+                  <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
@@ -517,7 +544,7 @@
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
 
 
@@ -525,7 +552,7 @@
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
 
 
 
@@ -624,6 +651,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
 
   
 
